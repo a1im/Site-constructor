@@ -1,0 +1,306 @@
+* {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+body {
+	color: #1a1a1a;
+	background: #fff;
+}
+
+a {
+	color: red;
+}
+a.imgDownload { color: blue;}
+
+#content {
+	/* max-width: 1000px; */
+	margin: auto;
+	margin: 20px;
+}
+
+#moneyRazdel {
+	
+}
+
+#footer {
+	margin: 50px 20px;
+}
+#footer .title {
+	font-size: 23px;
+	font-weight: 900;
+	color: #333;
+	margin: 30px 0 10px;
+}
+#footer .text {
+	font-size: 14px;
+	color: #333;
+	margin: 7px 0;
+}
+
+.razdel {
+	position: relative;
+	background: rgba(233,233,233,0.5);
+	border-radius: 5px;
+	margin: 20px 0;
+	padding: 15px 15px 15px 20px;
+	border: 1px solid rgba(233,233,233,1);
+	box-shadow: inset 2px 2px 1px 0 rgba(233,233,233,0.7);
+}
+
+.razdelTable {
+	position: relative;
+}
+
+.h1,.h2,.h3,.h4 {
+	position: relative;
+	cursor: pointer;
+	color: rgba(50,50,50,0.88);
+	margin: 0 5px 10px;
+	font-weight: 400;
+}
+.h1 {font-size: 25px; margin-left: 0;}
+.h2 {font-size: 22px; margin-left: 10px;}
+.h3 {font-size: 18px; margin-left: 20px;}
+.h4 {font-size: 15px; margin-left: 30px;}
+
+.plus:after, .minus:after {
+	position: relative;
+	font-size: 20px;
+	font-weight: 900;
+	color: #8e003c;
+	margin: 0 5px 0 0;
+}
+.plus:after {
+	content: "";
+	display: inline-block;
+	background: url(../img/plus1.png) 0 5px no-repeat;
+	background-size: 15px 15px;
+	width: 20px;
+	height: 20px;
+}
+.minus:after {content: "-";top: 40%;}
+
+.postFunc {
+	margin: 5px;
+}
+.postFunc.TrTd {
+	display: inline-block;
+}
+.postFunc button, .postFunc input, .postFunc label {
+	font-size: 12px;
+	padding: 1px;
+	cursor: pointer;
+}
+.postFunc input[type='number'] {width: 50px;}
+.postFunc input {background: #fff; color: #000;}
+.postFunc button[type='submit'] {background: #f00; color: #fff;}
+.delRazdel button, .delTable button {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.delTable button {top: 50%; transform: translateY(-50%);}
+
+button {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.blkTable {
+	position: relative;
+}
+.blkTable .textPod {
+	font-size: 17px;
+	padding: 15px 0;
+}
+.tableMoney {
+	border-spacing: 0 0;
+	border: 0px solid #22aa22;
+	font-size: 14px;
+	cursor: pointer;
+}
+.tableMoney td, .tableMoney th {
+	position: relative;
+	padding: 5px 10px;
+	margin: 0;
+	border: 1px solid #22aa22;
+	border-right: none;
+	border-bottom: none;
+}
+.idTd {position: absolute; top: -2px; left: 0; font-size: 10px; color: red;}
+.tableMoney td:last-child, .tableMoney th:last-child { border-right: 1px solid #22aa22; }
+.tableMoney tr:last-child td, .tableMoney tr:last-child th { border-bottom: 1px solid #22aa22; }
+.tableMoney tr:nth-child(2n) {
+	background-color: #ddeeff;
+}
+.tableMoney tr:hover {
+	background-color: #ffeeee;
+}
+.tableMoney td:hover {
+	background-color: #ffdddd;
+}
+.delTr, .delTd {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+}
+.delTd {top: 0; left: 50%; transform: translate(-50%, -100%);}
+.delTr {top: 50%; left: 0; transform: translate(-100%, -50%);}
+.delTr button, .delTd button {
+	padding: 0 5px;
+}
+.tdBlk {
+	top: 0;
+	left: 0;
+	position: relative;
+	min-width: 20px;
+	min-height: 20px;
+	margin: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+#formEditText {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+}
+#formEditText .tenb {
+	position: absolute;
+	top: 0;	
+	left: 0;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+	background: rgba(0,0,0,.4);
+	z-index: 1;
+}
+#formEditText .postFunc {
+	position: absolute;
+	top: 0;	
+	left: 50%;
+	transform: translateX(-50%);
+	width: 900px;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	background-color: #eee;
+	padding: 10px;
+	z-index: 2;
+}
+#formEditText textarea {
+	width: 100%;
+	max-width: 100%;
+	max-height: 90%;
+}
+
+#newsRazdel {
+	position: relative;
+	padding: 20px 0;
+}
+.titleNews {
+	font-size: 20px;
+	padding: 20px 0 0;
+}
+.data {
+	font-size: 14px;
+}
+.newsLink {
+	font-size: 14px;
+	font-weight: 900;
+	color: #000;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.newsLink:hover, #allNews:hover {
+	color: #555;
+}
+
+.delNews {
+	display: inline-block;
+}
+
+#allNews {
+	margin: 15px 0;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#vverh {
+	position: fixed;
+	display: block;
+	bottom: 20px;
+	right: -200px;
+	color: #000;
+	background: #eee;
+	padding: 7px 15px;
+	border-radius: 5px;
+	border: 1px solid #8e003c;
+	z-index: 1000;
+	cursor: pointer;
+	opacity: .8;
+}
+#vverh:hover {
+	opacity: 1;
+}
+
+.podpiska {
+	position: relative;
+	display: inline-block;
+	padding: 15px;
+	background: rgba(233,233,233,0.5);
+	border-radius: 5px;
+	margin: 20px 0;
+	border: 1px solid rgba(233,233,233,1);
+	box-shadow: inset 2px 2px 1px 0 rgba(233,233,233,0.7);
+	font-size: 16px;
+}
+.podpiska .title {
+	font-size: 18px;
+	line-height: 25px;
+	margin: 0 0 5px 0;
+}
+.podpiska form label {
+	font-size: 16px;
+	line-height: 20px;
+}
+.podpiska form input {
+	font-size: 16px;
+	line-height: 20px;
+	padding: 3px 7px;
+}
+.podpiska form button {
+	margin: 0 0 0 10px;
+	height: 60px;
+	cursor: pointer;
+}
+.fleft {float: left;}
+.fright {float: right;}
+
+.clear:after, .clear:before {
+	content: " ";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
